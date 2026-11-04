@@ -1,0 +1,129 @@
+{
+  "ayarlar": {
+    "duyuru": "750 TL ve üzeri siparişlerde kargo bedava!",
+    "telefon": "0 (5xx) xxx xx xx",
+    "eposta": "info@catonut.net",
+    "instagram": "",
+    "shopier_magaza": "https://www.shopier.com/catonut"
+  },
+  "kategoriler": [
+    { "ad": "Fındık", "kod": "findik" },
+    { "ad": "Fındık Ezmesi", "kod": "findik-ezmesi" },
+    { "ad": "Kuruyemiş", "kod": "kuruyemis" },
+    { "ad": "Hediye Kutuları", "kod": "hediye-kutulari" }
+  ],
+  "urunler": [
+    {
+      "kod": "kavrulmus-ic-findik-500g",
+      "ad": "Kavrulmuş İç Fındık 500 g",
+      "baslik": "Kavrulmuş İç Fındık - Giresun Tombul",
+      "kategori": "findik",
+      "fiyat": 389.90,
+      "eski_fiyat": 449.90,
+      "kisa": "Taze kavrulmuş, kabuğu soyulmuş tombul fındık.",
+      "aciklama": "Karadeniz'in verimli bahçelerinden özenle seçilen tombul fındıklar, düşük ısıda kavrulup aynı gün paketlenir.\n\nSaklama: Serin ve kuru yerde, ağzı kapalı olarak muhafaza ediniz.",
+      "gorsel": "img/urunler/kavrulmus-ic-findik-500g.svg",
+      "shopier_link": "",
+      "stokta": true,
+      "one_cikan": true
+    },
+    {
+      "kod": "cig-ic-findik-1kg",
+      "ad": "Çiğ İç Fındık 1 kg",
+      "baslik": "Çiğ İç Fındık - Yeni Mahsul",
+      "kategori": "findik",
+      "fiyat": 699.90,
+      "eski_fiyat": null,
+      "kisa": "Doğal, işlenmemiş yeni mahsul iç fındık.",
+      "aciklama": "Yeni mahsul, kalibre edilmiş çiğ iç fındık. Kahvaltıda, tatlılarda ve atıştırmalık olarak.\n\nSaklama: Serin ve kuru yerde muhafaza ediniz.",
+      "gorsel": "img/urunler/cig-ic-findik-1kg.svg",
+      "shopier_link": "",
+      "stokta": true,
+      "one_cikan": true
+    },
+    {
+      "kod": "kabuklu-findik-1kg",
+      "ad": "Kabuklu Fındık 1 kg",
+      "baslik": "Kabuklu Fındık - Doğal",
+      "kategori": "findik",
+      "fiyat": 329.90,
+      "eski_fiyat": null,
+      "kisa": "Ağaçtan yeni toplanmış kabuklu fındık.",
+      "aciklama": "Bahçeden yeni toplanmış, güneşte kurutulmuş kabuklu fındık.",
+      "gorsel": "img/urunler/kabuklu-findik-1kg.svg",
+      "shopier_link": "",
+      "stokta": true,
+      "one_cikan": false
+    },
+    {
+      "kod": "sade-findik-ezmesi-300g",
+      "ad": "Sade Fındık Ezmesi 300 g",
+      "baslik": "Şekersiz Sade Fındık Ezmesi",
+      "kategori": "findik-ezmesi",
+      "fiyat": 279.90,
+      "eski_fiyat": 319.90,
+      "kisa": "%100 kavrulmuş fındıktan, katkısız.",
+      "aciklama": "Sadece kavrulmuş fındıktan yapılır; şeker, yağ veya katkı maddesi içermez.\n\nAçıldıktan sonra buzdolabında saklayınız.",
+      "gorsel": "img/urunler/sade-findik-ezmesi-300g.svg",
+      "shopier_link": "",
+      "stokta": true,
+      "one_cikan": true
+    },
+    {
+      "kod": "kakaolu-findik-ezmesi-300g",
+      "ad": "Kakaolu Fındık Ezmesi 300 g",
+      "baslik": "Kakaolu Fındık Kreması",
+      "kategori": "findik-ezmesi",
+      "fiyat": 249.90,
+      "eski_fiyat": null,
+      "kisa": "Bol fındıklı, kakaolu kahvaltılık krema.",
+      "aciklama": "Bol fındık ve kakaoyla hazırlanan kahvaltılık krema.",
+      "gorsel": "img/urunler/kakaolu-findik-ezmesi-300g.svg",
+      "shopier_link": "",
+      "stokta": true,
+      "one_cikan": false
+    },
+    {
+      "kod": "cig-badem-500g",
+      "ad": "Çiğ Badem 500 g",
+      "baslik": "Çiğ Badem İçi",
+      "kategori": "kuruyemis",
+      "fiyat": 359.90,
+      "eski_fiyat": null,
+      "kisa": "Kalibre, çiğ badem içi.",
+      "aciklama": "Seçilmiş, kalibre çiğ badem içi.",
+      "gorsel": "img/urunler/cig-badem-500g.svg",
+      "shopier_link": "",
+      "stokta": true,
+      "one_cikan": false
+    },
+    {
+      "kod": "ceviz-ici-500g",
+      "ad": "Ceviz İçi 500 g",
+      "baslik": "Gün Kurusu Ceviz İçi",
+      "kategori": "kuruyemis",
+      "fiyat": 419.90,
+      "eski_fiyat": null,
+      "kisa": "Açık renkli, taze ceviz içi.",
+      "aciklama": "Açık renkli, taze ve kırılmamış ceviz içi.",
+      "gorsel": "img/urunler/ceviz-ici-500g.svg",
+      "shopier_link": "",
+      "stokta": true,
+      "one_cikan": false
+    },
+    {
+      "kod": "catonut-hediye-kutusu",
+      "ad": "Catonut Hediye Kutusu",
+      "baslik": "Catonut Karışık Hediye Kutusu",
+      "kategori": "hediye-kutulari",
+      "fiyat": 899.90,
+      "eski_fiyat": 999.90,
+      "kisa": "Fındık, ezme ve kuruyemişten oluşan şık kutu.",
+      "aciklama": "Kavrulmuş fındık, fındık ezmesi ve kuruyemişlerden oluşan özel hediye kutusu.",
+      "gorsel": "img/urunler/catonut-hediye-kutusu.svg",
+      "shopier_link": "",
+      "stokta": true,
+      "one_cikan": true
+    }
+  ]
+}
