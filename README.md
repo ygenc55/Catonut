@@ -1,4 +1,4 @@
-# catonut.net vitrin sitesi
+# catonut.com vitrin sitesi
 
 Ürünler `urunler.json` dosyasından okunur. "Satın Al" butonu ürünün Shopier sayfasına gider.
 

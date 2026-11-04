@@ -24,7 +24,7 @@
 <div><h4>Kategoriler</h4>${cats.map(c => `<a href="kategori.html?k=${esc(c.kod)}">${esc(c.ad)}</a>`).join('')}</div>
 <div><h4>Kurumsal</h4><a href="hakkimizda.html">Hakkımızda</a><a href="iade.html">İade ve Değişim</a><a href="kvkk.html">KVKK Aydınlatma Metni</a></div>
 <div><h4>İletişim</h4><p>${esc(s.telefon)}<br>${esc(s.eposta)}${s.instagram ? `<br><a href="${esc(s.instagram)}" rel="noopener">Instagram</a>` : ''}</p></div>
-</div><div class="wrap copy">© ${new Date().getFullYear()} Catonut.net · Tüm hakları saklıdır.</div></footer>`;
+</div><div class="wrap copy">© ${new Date().getFullYear()} Catonut · Tüm hakları saklıdır.</div></footer>`;
 
   const buyBtn = (p, cls = '') => !p.stokta ? `<button class="btn ghost ${cls}" disabled>Tükendi</button>`
     : p.shopier_link ? `<a class="btn ${cls}" href="${esc(p.shopier_link)}" rel="noopener">Satın Al</a>`
