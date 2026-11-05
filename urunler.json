@@ -12,6 +12,10 @@
       "kod": "findik"
     },
     {
+      "ad": "Kakaolu Fındık Kreması",
+      "kod": "kakaolu-findik-kremasi"
+    },
+    {
       "ad": "Fındık Ezmesi",
       "kod": "findik-ezmesi"
     }
@@ -63,7 +67,7 @@
       "kod": "kakaolu-findik-kremasi",
       "ad": "ÇATONUT Premium Kakaolu Fındık Kreması",
       "baslik": "ÇATONUT Premium Kakaolu Fındık Kreması",
-      "kategori": "findik-ezmesi",
+      "kategori": "kakaolu-findik-kremasi",
       "fiyat": 299,
       "eski_fiyat": null,
       "kisa": "Bol fındıklı, kakaolu premium kahvaltılık krema.",
