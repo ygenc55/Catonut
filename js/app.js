@@ -18,11 +18,11 @@
 <header class="header"><div class="wrap head-row">${logo}
 <form class="search" action="ara.html"><input name="q" placeholder="Ürün ara..." aria-label="Ürün ara" value="${esc(q.get('q'))}"><button>Ara</button></form>
 <nav class="head-links">${s.shopier_magaza ? `<a href="${esc(s.shopier_magaza)}" rel="noopener">Mağazamız</a>` : ''}<a href="iletisim.html">İletişim</a></nav></div>
-<nav class="catnav"><div class="wrap"><a href="./">Ana Sayfa</a>${cats.map(c => `<a href="kategori.html?k=${esc(c.kod)}">${esc(c.ad)}</a>`).join('')}<a href="hakkimizda.html">Hakkımızda</a></div></nav></header>`;
+<nav class="catnav"><div class="wrap"><a href="./">Ana Sayfa</a>${cats.map(c => `<a href="kategori.html?k=${esc(c.kod)}">${esc(c.ad)}</a>`).join('')}<a href="hakkimizda.html">Hikâyemiz</a></div></nav></header>`;
   document.getElementById('alt').innerHTML = `<section class="trust"><div class="wrap trust-row"><div><b>Hızlı Kargo</b><span>DHL ile hızlı gönderim</span></div><div><b>Güvenli Ödeme</b><span>Shopier güvencesiyle kartla ödeme</span></div><div><b>Taze Ürün</b><span>Yeni mahsul, özenli paketleme</span></div><div><b>Kolay İade</b><span>14 gün içinde iade hakkı</span></div></div></section>
 <footer class="footer"><div class="wrap foot-grid"><div>${logo}<p>Karadeniz'in doğal lezzetlerini sofranıza getiriyoruz.</p></div>
 <div><h4>Kategoriler</h4>${cats.map(c => `<a href="kategori.html?k=${esc(c.kod)}">${esc(c.ad)}</a>`).join('')}</div>
-<div><h4>Kurumsal</h4><a href="hakkimizda.html">Hakkımızda</a><a href="iade.html">İade ve Değişim</a><a href="kvkk.html">KVKK Aydınlatma Metni</a></div>
+<div><h4>Kurumsal</h4><a href="hakkimizda.html">Hikâyemiz</a><a href="iade.html">İade ve Değişim</a><a href="kvkk.html">KVKK Aydınlatma Metni</a></div>
 <div><h4>İletişim</h4><p>${esc(s.telefon)}<br>${esc(s.eposta)}${s.instagram ? `<br><a href="${esc(s.instagram)}" rel="noopener">Instagram</a>` : ''}</p></div>
 </div><div class="wrap copy">© ${new Date().getFullYear()} Catonut · Tüm hakları saklıdır.</div></footer>`;
 
@@ -43,6 +43,7 @@
 <section class="hero"><div class="wrap hero-row"><div class="hero-text"><span class="eyebrow">Yağlı Fındıktan</span><h1>Karadeniz'den sofranıza<br><em>taze ve doğal</em> lezzet</h1><p>Günlük kavrulan iç fındık, %85 fındıklı saf ezme ve kakaolu fındık kreması. Katkısız, özenle paketlenir, kapınıza gelir.</p><div class="hero-cta"><a class="btn big" href="#urunler">Alışverişe Başla</a><a class="btn big light" href="kategori.html?k=findik">Fındıkları İncele</a></div></div>
 <div class="hero-pics"><img class="p1" src="${pic('kavrulmus-ic-findik-1kg')}" alt=""><img class="p2" src="${pic('saf-findik-ezmesi')}" alt=""><img class="p3" src="${pic('kakaolu-findik-kremasi')}" alt=""></div></div></section>
 <section class="perks"><div class="wrap perk-row"><div><b>🌰 Yağlı fındıktan</b><span>Aroması yoğun, seçilmiş fındık</span></div><div><b>🔥 Taze kavrum</b><span>Siparişe yakın kavrulur</span></div><div><b>🔒 Güvenli ödeme</b><span>Shopier ile kart veya havale</span></div><div><b>🚚 Hızlı kargo</b><span>DHL ile Türkiye'nin her yerine</span></div></div></section>
+<section class="story"><div class="wrap story-row"><div class="story-badge">Örencik<br>Fındığından</div><div><span class="eyebrow">Hikâyemiz</span><h2>Adı Çağatay’dan, lezzeti Terme fındığından</h2><p>Fındığın başkenti Terme’nin bereketli topraklarında yetişen titizlikle seçilmiş fındıkları, özenle hazırladığımız lezzetlerle buluşturuyoruz. Her kavanozda Çağatay’ın adını, Karadeniz’in fındık kokusunu ve ailemizden gelen sevgiyi yaşatıyoruz.</p></div></div></section>
 <section class="wrap"><h2 class="sec-title">Kategoriler</h2><div class="cats">${cats.map(c => `<a class="cat" href="kategori.html?k=${esc(c.kod)}"><img src="${esc(img(c.kod))}" alt="" loading="lazy"><span>${esc(c.ad)}</span></a>`).join('')}</div></section>
 <section class="wrap"><h2 class="sec-title">Öne Çıkan Ürünler</h2>${grid(all.filter(p => p.one_cikan))}</section>
 <section class="wrap" id="urunler"><h2 class="sec-title">Tüm Ürünler</h2>${grid(all)}</section>`;
