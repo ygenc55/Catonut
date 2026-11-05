@@ -23,7 +23,7 @@
 <footer class="footer"><div class="wrap foot-grid"><div>${logo}<p>Karadeniz'in doğal lezzetlerini sofranıza getiriyoruz.</p></div>
 <div><h4>Kategoriler</h4>${cats.map(c => `<a href="kategori.html?k=${esc(c.kod)}">${esc(c.ad)}</a>`).join('')}</div>
 <div><h4>Kurumsal</h4><a href="hakkimizda.html">Hikâyemiz</a><a href="iade.html">İade ve Değişim</a><a href="kvkk.html">KVKK Aydınlatma Metni</a></div>
-<div><h4>İletişim</h4><p>${esc(s.telefon)}<br>${esc(s.eposta)}${s.instagram ? `<br><a href="${esc(s.instagram)}" rel="noopener">Instagram</a>` : ''}</p></div>
+<div><h4>İletişim</h4><p>${s.telefon ? esc(s.telefon) + "<br>" : ""}${esc(s.eposta)}</p><p class="social">${s.instagram ? `<a href="${esc(s.instagram)}" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 4.7a5.1 5.1 0 100 10.2 5.1 5.1 0 000-10.2zm0 8.4a3.3 3.3 0 110-6.6 3.3 3.3 0 010 6.6zm5.3-9.8a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"/></svg> @catonut_tr</a>` : ''}${s.facebook ? `<a href="${esc(s.facebook)}" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg> Facebook</a>` : ''}</p></div>
 </div><div class="wrap copy">© ${new Date().getFullYear()} Çatonut · Tüm hakları saklıdır.</div></footer>`;
 
   const buyBtn = (p, cls = '') => !p.stokta ? `<button class="btn ghost ${cls}" disabled>Tükendi</button>`
@@ -73,6 +73,6 @@
 <div class="pd-desc"><h2>Ürün Açıklaması</h2>${nl2p(p.aciklama)}</div>
 ${rel.length ? `<h2 class="sec-title">Benzer Ürünler</h2>${grid(rel)}` : ''}</section>`;
   } else if (page === 'iletisim') {
-    main.querySelector('.iletisim-bilgi').innerHTML = `Telefon: ${esc(s.telefon)}<br>E-posta: ${esc(s.eposta)}`;
+    main.querySelector('.iletisim-bilgi').innerHTML = `${s.telefon ? "Telefon: " + esc(s.telefon) + "<br>" : ""}E-posta: ${esc(s.eposta)}`;
   }
 })();
