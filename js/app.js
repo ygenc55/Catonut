@@ -35,9 +35,12 @@
   const setTitle = t => { document.title = t + ' | Catonut'; };
 
   if (page === 'ana') {
-    main.innerHTML = `<section class="hero"><div class="wrap hero-row"><div><h1>Karadeniz'den sofranıza<br><em>taze ve doğal</em></h1><p>Giresun'un tombul fındığı taze kavrulmuş, fındık ezmeleri bol fındıklı.</p><a class="btn big" href="#urunler">Alışverişe Başla</a></div>
-<div class="hero-art" aria-hidden="true"><svg viewBox="0 0 200 160"><ellipse cx="100" cy="140" rx="90" ry="12" fill="#00000018"/><path d="M100 30c-30 0-48 22-48 52 0 26 22 46 48 46s48-20 48-46c0-30-18-52-48-52z" fill="#a0612f"/><path d="M54 70c12-20 28-28 46-28s34 8 46 28c-14-7-30-10-46-10s-32 3-46 10z" fill="#5a3418"/><rect x="96" y="18" width="8" height="20" rx="4" fill="#5a3418"/><ellipse cx="80" cy="95" rx="10" ry="6" fill="#ffffff40"/><path d="M104 22c14-14 34-12 44-4-16 2-28 8-40 14z" fill="#6f8f3a"/></svg></div></div></section>
-<section class="wrap"><h2 class="sec-title">Kategoriler</h2><div class="cats">${cats.map(c => `<a class="cat" href="kategori.html?k=${esc(c.kod)}">${esc(c.ad)}</a>`).join('')}</div></section>
+    const img = k => (all.find(p => p.kategori === k) || {}).gorsel || 'img/placeholder.svg';
+    const pic = c => esc((all.find(p => p.kod === c) || {}).gorsel || 'img/placeholder.svg');
+    main.innerHTML = `<section class="hero"><div class="wrap hero-row"><div class="hero-text"><span class="eyebrow">Giresun Tombul Fındığı</span><h1>Karadeniz'den sofranıza<br><em>taze ve doğal</em> lezzet</h1><p>Günlük kavrulan iç fındık, %85 fındıklı saf ezme ve kakaolu fındık kreması. Katkısız, özenle paketlenir, kapınıza gelir.</p><div class="hero-cta"><a class="btn big" href="#urunler">Alışverişe Başla</a><a class="btn big light" href="kategori.html?k=findik">Fındıkları İncele</a></div></div>
+<div class="hero-pics"><img class="p1" src="${pic('kavrulmus-ic-findik-1kg')}" alt=""><img class="p2" src="${pic('saf-findik-ezmesi')}" alt=""><img class="p3" src="${pic('kakaolu-findik-kremasi')}" alt=""></div></div></section>
+<section class="perks"><div class="wrap perk-row"><div><b>🌰 Giresun'dan</b><span>Tombul fındık, doğrudan üreticiden</span></div><div><b>🔥 Taze kavrum</b><span>Siparişe yakın kavrulur</span></div><div><b>🔒 Güvenli ödeme</b><span>Shopier ile kart veya havale</span></div><div><b>🚚 Hızlı kargo</b><span>DHL ile Türkiye'nin her yerine</span></div></div></section>
+<section class="wrap"><h2 class="sec-title">Kategoriler</h2><div class="cats">${cats.map(c => `<a class="cat" href="kategori.html?k=${esc(c.kod)}"><img src="${esc(img(c.kod))}" alt="" loading="lazy"><span>${esc(c.ad)}</span></a>`).join('')}</div></section>
 <section class="wrap"><h2 class="sec-title">Öne Çıkan Ürünler</h2>${grid(all.filter(p => p.one_cikan))}</section>
 <section class="wrap" id="urunler"><h2 class="sec-title">Tüm Ürünler</h2>${grid(all)}</section>`;
   } else if (page === 'kategori') {
