@@ -13,7 +13,7 @@
   const s = data.ayarlar || {}, cats = data.kategoriler || [], all = data.urunler || [];
   const catName = k => (cats.find(c => c.kod === k) || {}).ad || '';
 
-  const logo = `<a class="logo" href="./" aria-label="Catonut ana sayfa"><svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><path d="M20 5c-9 0-15 7-15 16 0 8 7 14 15 14s15-6 15-14C35 12 29 5 20 5z" fill="#a0612f"/><path d="M6 17c4-6 9-8 14-8s10 2 14 8c-4-2-9-3-14-3S10 15 6 17z" fill="#5a3418"/><path d="M20 3v6" stroke="#5a3418" stroke-width="3" stroke-linecap="round"/><ellipse cx="14" cy="24" rx="3.5" ry="2.2" fill="#ffffff40"/></svg><span>cato<b>nut</b></span></a>`;
+  const logo = `<a class="logo" href="./" aria-label="Çatonut ana sayfa"><svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><path d="M20 5c-9 0-15 7-15 16 0 8 7 14 15 14s15-6 15-14C35 12 29 5 20 5z" fill="#a0612f"/><path d="M6 17c4-6 9-8 14-8s10 2 14 8c-4-2-9-3-14-3S10 15 6 17z" fill="#5a3418"/><path d="M20 3v6" stroke="#5a3418" stroke-width="3" stroke-linecap="round"/><ellipse cx="14" cy="24" rx="3.5" ry="2.2" fill="#ffffff40"/></svg><span>ÇATO<b>NUT</b></span></a>`;
   document.getElementById('ust').innerHTML = `<div class="topbar">${esc(s.duyuru)}</div>
 <header class="header"><div class="wrap head-row">${logo}
 <form class="search" action="ara.html"><input name="q" placeholder="Ürün ara..." aria-label="Ürün ara" value="${esc(q.get('q'))}"><button>Ara</button></form>
@@ -24,7 +24,7 @@
 <div><h4>Kategoriler</h4>${cats.map(c => `<a href="kategori.html?k=${esc(c.kod)}">${esc(c.ad)}</a>`).join('')}</div>
 <div><h4>Kurumsal</h4><a href="hakkimizda.html">Hikâyemiz</a><a href="iade.html">İade ve Değişim</a><a href="kvkk.html">KVKK Aydınlatma Metni</a></div>
 <div><h4>İletişim</h4><p>${esc(s.telefon)}<br>${esc(s.eposta)}${s.instagram ? `<br><a href="${esc(s.instagram)}" rel="noopener">Instagram</a>` : ''}</p></div>
-</div><div class="wrap copy">© ${new Date().getFullYear()} Catonut · Tüm hakları saklıdır.</div></footer>`;
+</div><div class="wrap copy">© ${new Date().getFullYear()} Çatonut · Tüm hakları saklıdır.</div></footer>`;
 
   const buyBtn = (p, cls = '') => !p.stokta ? `<button class="btn ghost ${cls}" disabled>Tükendi</button>`
     : p.shopier_link ? `<a class="btn ${cls}" href="${esc(p.shopier_link)}" rel="noopener">Satın Al</a>`
@@ -32,7 +32,7 @@
   const card = p => `<article class="card"><a href="urun.html?u=${esc(p.kod)}" class="card-img">${p.eski_fiyat ? `<span class="tag">%${Math.round((1 - p.fiyat / p.eski_fiyat) * 100)} İndirim</span>` : ''}<img src="${esc(p.gorsel || 'img/placeholder.svg')}" alt="${esc(p.ad)}" loading="lazy"></a>
 <div class="card-body"><a href="urun.html?u=${esc(p.kod)}" class="card-name">${esc(p.ad)}</a><div class="price">${p.eski_fiyat ? `<s>${tl(p.eski_fiyat)}</s>` : ''}<b>${tl(p.fiyat)}</b></div>${buyBtn(p)}</div></article>`;
   const grid = ps => ps.length ? `<div class="grid">${ps.map(card).join('')}</div>` : '<p class="empty">Bu bölümde henüz ürün yok.</p>';
-  const setTitle = t => { document.title = t + ' | Catonut'; };
+  const setTitle = t => { document.title = t + ' | Çatonut'; };
 
   if (page === 'ana') {
     const img = k => (all.find(p => p.kategori === k) || {}).gorsel || 'img/placeholder.svg';
